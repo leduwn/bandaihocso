@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" fill="none">
+  <!-- Samsung SDS -->
+  <g transform="translate(10, 18)">
+    <text x="0" y="28" font-family="'Segoe UI', -apple-system, Roboto, sans-serif" font-weight="900" font-size="22" fill="#0c4da2" letter-spacing="1">SAMSUNG</text>
+    <text x="110" y="28" font-family="'Segoe UI', -apple-system, Roboto, sans-serif" font-weight="700" font-size="16" fill="#008fd5" letter-spacing="0.5">SDS</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="170" y1="20" x2="170" y2="60" stroke="#cbd5e1" stroke-width="1.5" />
+
+  <!-- Microsoft -->
+  <g transform="translate(190, 22)">
+    <!-- Microsoft 4-square icon -->
+    <rect x="0" y="4" width="14" height="14" fill="#f25022"/>
+    <rect x="17" y="4" width="14" height="14" fill="#7fba00"/>
+    <rect x="0" y="21" width="14" height="14" fill="#00a4ef"/>
+    <rect x="17" y="21" width="14" height="14" fill="#ffb900"/>
+    <!-- Microsoft Wordmark -->
+    <text x="38" y="26" font-family="'Segoe UI', -apple-system, Roboto, sans-serif" font-weight="600" font-size="16" fill="#505050">Microsoft</text>
+  </g>
+</svg>

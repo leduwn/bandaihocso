@@ -1,0 +1,737 @@
+/* ==========================================================================
+   CMCU & BAN ĐẠI HỌC SỐ - OFFICIAL BRAND IDENTITY STYLESHEET
+   Colors:
+     - CMC Primary Blue: #008fd5
+     - CMC Deep Navy:    #002757
+     - CMC Accent Red:   #ae152d
+     - CMC Accent Cyan:  #00dedf
+   ========================================================================== */
+
+:root {
+  --cmc-blue: #008fd5;
+  --cmc-navy: #002757;
+  --cmc-red: #ae152d;
+  --cmc-cyan: #00dedf;
+  --cmc-dark: #001a3a;
+  --cmc-gray: #f4f7fb;
+}
+
+/* ==========================================================================
+   0. CRITICAL VISIBILITY GUARANTEE (OVERRIDE FLATSOME HIDDEN ANIMATIONS)
+   ========================================================================== */
+[data-animate],
+.slider [data-animate],
+[data-animate="fadeInDown"],
+[data-animate="fadeInLeft"],
+[data-animate="fadeInRight"],
+[data-animate="fadeInUp"],
+[data-animate="bounceInUp"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+}
+
+/* Ensure Flatsome hidden/shown viewport utilities are strictly preserved */
+@media (min-width: 850px) {
+  .show-for-medium,
+  .show-for-small {
+    display: none !important;
+  }
+}
+@media (max-width: 849px) and (min-width: 550px) {
+  .hide-for-medium,
+  .show-for-small {
+    display: none !important;
+  }
+}
+@media (max-width: 549px) {
+  .hide-for-small,
+  .show-for-medium {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   1. BRAND HEADER & NAVIGATION
+   ========================================================================== */
+#top-bar {
+  background-color: var(--cmc-navy) !important;
+  border-bottom: 2px solid var(--cmc-blue) !important;
+}
+
+#top-bar a, #top-bar span, #top-bar i {
+  color: #e2e8f0 !important;
+}
+
+#top-bar a:hover {
+  color: var(--cmc-cyan) !important;
+}
+
+.header-main {
+  background: #ffffff !important;
+  box-shadow: 0 2px 15px rgba(0, 39, 87, 0.08) !important;
+}
+
+/* Dual Brand Logo Header */
+.cmcu-dual-brand-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  text-decoration: none !important;
+  padding: 6px 0 !important;
+}
+
+.cmcu-dual-brand-logo .logo-cmcu {
+  height: 44px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.cmcu-dual-brand-logo .logo-sep {
+  display: inline-block !important;
+  width: 1.5px !important;
+  height: 34px !important;
+  background: var(--cmc-blue) !important;
+  opacity: 0.55 !important;
+}
+
+.cmcu-dual-brand-logo .logo-bds-group {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+.cmcu-dual-brand-logo .logo-bds-img {
+  height: 32px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.cmcu-dual-brand-logo .logo-bds-caption {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  margin-top: 3px !important;
+  font-family: 'Roboto', -apple-system, sans-serif !important;
+}
+
+/* Nav items */
+.header-nav > li > a {
+  color: var(--cmc-navy) !important;
+  font-weight: 700 !important;
+  transition: all 0.25s ease !important;
+}
+
+.header-nav > li > a:hover,
+.header-nav > li.active > a,
+.header-nav > li.current-menu-item > a {
+  color: var(--cmc-blue) !important;
+}
+
+.header-nav > li > a:after {
+  background-color: var(--cmc-blue) !important;
+}
+
+/* Header Contact Button */
+.header-nav .header-button a.button,
+.header-bottom-nav .header-button a.button,
+a.button.primary,
+.button.primary {
+  background: linear-gradient(135deg, var(--cmc-blue), var(--cmc-navy)) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(0, 143, 213, 0.35) !important;
+  transition: all 0.3s ease !important;
+}
+
+.header-nav .header-button a.button:hover,
+a.button.primary:hover {
+  background: linear-gradient(135deg, var(--cmc-navy), var(--cmc-blue)) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(0, 39, 87, 0.4) !important;
+}
+
+/* ==========================================================================
+   2. HERO SLIDERS & BANNER BUTTONS
+   ========================================================================== */
+.flickity-page-dots .dot {
+  background: var(--cmc-blue) !important;
+  opacity: 0.4 !important;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: var(--cmc-cyan) !important;
+  opacity: 1 !important;
+  width: 24px !important;
+  border-radius: 6px !important;
+}
+
+.flickity-prev-next-button {
+  background: rgba(0, 39, 87, 0.6) !important;
+}
+
+.flickity-prev-next-button:hover {
+  background: var(--cmc-blue) !important;
+}
+
+/* ==========================================================================
+   3. SERVICE CARDS (FIX ALIGNMENT & DESIGN)
+   ========================================================================== */
+#section_466373946, #section_1212534044, #section_720290466 {
+  background-color: var(--cmc-gray) !important;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+#section_466373946 .col-inner,
+#section_1212534044 .col-inner,
+#section_720290466 .col-inner {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.imgbox-dv {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 18px rgba(0, 39, 87, 0.08) !important;
+  border: 1px solid rgba(0, 143, 213, 0.15) !important;
+  height: 100% !important;
+  min-height: 290px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 28px 22px !important;
+  margin: 0 !important;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.imgbox-dv:before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, var(--cmc-blue), var(--cmc-cyan)) !important;
+  transition: height 0.3s ease !important;
+}
+
+.imgbox-dv:hover {
+  background: var(--cmc-navy) !important;
+  border-color: var(--cmc-blue) !important;
+  transform: translateY(-8px) !important;
+  box-shadow: 0 16px 36px rgba(0, 39, 87, 0.28) !important;
+}
+
+.imgbox-dv:hover:before {
+  height: 6px !important;
+  background: linear-gradient(90deg, var(--cmc-cyan), var(--cmc-red)) !important;
+}
+
+.imgbox-dv .box-image {
+  width: 100% !important;
+  margin: 0 auto 16px auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 70px !important;
+}
+
+.imgbox-dv .box-image img {
+  max-height: 60px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  transition: transform 0.3s ease !important;
+}
+
+.imgbox-dv:hover .box-image img {
+  transform: scale(1.12) !important;
+  filter: brightness(1.15) !important;
+}
+
+.imgbox-dv .box-text {
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.imgbox-dv .box-text-inner {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.imgbox-dv .service-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+}
+
+.imgbox-dv h4 {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-navy) !important;
+  margin-bottom: 12px !important;
+  line-height: 1.45 !important;
+  transition: color 0.3s ease !important;
+}
+
+.imgbox-dv:hover h4 {
+  color: #ffffff !important;
+}
+
+.imgbox-dv p {
+  font-size: 14px !important;
+  color: #334155 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 16px !important;
+  transition: color 0.3s ease !important;
+}
+
+.imgbox-dv:hover p {
+  color: #f1f5f9 !important;
+}
+
+.imgbox-dv a {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-blue) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  margin-top: auto !important;
+}
+
+.imgbox-dv:hover a {
+  color: var(--cmc-cyan) !important;
+  transform: translateX(4px) !important;
+}
+
+/* ==========================================================================
+   4. HEADINGS, BADGES & ACCENTS
+   ========================================================================== */
+h1, h2, h3, .col-title {
+  color: var(--cmc-navy) !important;
+}
+
+/* Base Body Text Contrast (WCAG AA > 4.5:1) */
+p, .col-inner p {
+  color: #334155;
+}
+
+strong, b {
+  color: var(--cmc-navy);
+}
+
+/* Hero Overlay Typography & Glassmorphism Card (UI/UX Pro Max Contrast) */
+.chu-dung-yen,
+.chu-dung-yenmb {
+  z-index: 15 !important;
+}
+
+.khung-slider-chinh .banner:before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, rgba(0, 26, 58, 0.72) 0%, rgba(0, 39, 87, 0.45) 45%, rgba(0, 0, 0, 0.12) 100%) !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+
+.acac-hero-text {
+  background: linear-gradient(135deg, rgba(0, 26, 58, 0.88) 0%, rgba(0, 39, 87, 0.82) 100%) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-radius: 20px !important;
+  padding: 32px 36px !important;
+  border-left: 6px solid var(--cmc-cyan) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 20px 50px rgba(0, 15, 38, 0.55), 0 0 30px rgba(0, 222, 223, 0.15) !important;
+  max-width: 680px !important;
+}
+
+.acac-hero-text .highlight-text {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(0, 222, 223, 0.15) !important;
+  border: 1px solid rgba(0, 222, 223, 0.6) !important;
+  color: var(--cmc-cyan) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.2px !important;
+  text-transform: uppercase !important;
+  padding: 6px 16px !important;
+  border-radius: 30px !important;
+  margin-bottom: 16px !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+.acac-hero-text h1 {
+  font-size: 52px !important;
+  font-weight: 900 !important;
+  line-height: 1.12 !important;
+  margin: 4px 0 !important;
+  letter-spacing: 0.5px !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
+
+.acac-hero-text h1:nth-of-type(2) {
+  color: var(--cmc-cyan) !important;
+  text-shadow: 0 0 25px rgba(0, 222, 223, 0.5), 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+}
+
+.acac-hero-text .subtext {
+  color: #f1f5f9 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin-top: 16px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+@media (max-width: 849px) {
+  .acac-hero-text {
+    padding: 22px 24px !important;
+    border-radius: 16px !important;
+  }
+  .acac-hero-text h1 {
+    font-size: 32px !important;
+  }
+  .acac-hero-text .subtext {
+    font-size: 13px !important;
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+  }
+  .acac-hero-text .highlight-text {
+    font-size: 11px !important;
+    padding: 4px 12px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+/* Modern High-Contrast Section Badges (WCAG 6.8:1 on light bg) */
+#text-524056605 h4,
+#text-3048788510 h4,
+#text-1858685842 h4,
+#section_865356580 h4,
+#section_1638842805 h4,
+.why-choose-us .subtitle {
+  color: #0077b6 !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  letter-spacing: 1.2px !important;
+  text-transform: uppercase !important;
+  display: inline-block !important;
+  background: rgba(0, 143, 213, 0.08) !important;
+  border: 1px solid rgba(0, 143, 213, 0.22) !important;
+  padding: 5px 16px !important;
+  border-radius: 20px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 143, 213, 0.08) !important;
+}
+
+/* Section 6 (Call to Action) Dark High Contrast Typography */
+#section_1415813573,
+.section-donghanh {
+  background: linear-gradient(135deg, rgba(0, 26, 58, 0.92), rgba(0, 39, 87, 0.88)), url("/uploads/bds-auditorium-event.jpg") center/cover no-repeat !important;
+  padding: 70px 0 !important;
+  position: relative !important;
+}
+
+#section_1415813573 h1,
+.section-donghanh h1 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 36px !important;
+  line-height: 1.3 !important;
+  text-shadow: 0 3px 14px rgba(0, 15, 38, 0.9) !important;
+  max-width: 900px !important;
+  margin: 0 auto 16px auto !important;
+  text-align: center !important;
+}
+
+#section_1415813573 p,
+.section-donghanh p {
+  color: #f1f5f9 !important;
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+  text-shadow: 0 2px 8px rgba(0, 15, 38, 0.8) !important;
+  max-width: 820px !important;
+  margin: 16px auto 28px auto !important;
+  text-align: center !important;
+}
+
+#section_1415813573 a.button,
+.section-donghanh a.button {
+  background: var(--cmc-cyan) !important;
+  color: var(--cmc-navy) !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.8px !important;
+  border: none !important;
+  box-shadow: 0 6px 22px rgba(0, 222, 223, 0.5) !important;
+  padding: 12px 32px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+}
+
+#section_1415813573 a.button span,
+.section-donghanh a.button span {
+  color: var(--cmc-navy) !important;
+  font-weight: 800 !important;
+}
+
+#section_1415813573 a.button:hover,
+.section-donghanh a.button:hover {
+  background: #ffffff !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Section 2 (Partner Cards & High Contrast Links) */
+.acac-partner-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 18px rgba(0, 39, 87, 0.06) !important;
+}
+
+.acac-partner-card h3 {
+  color: var(--cmc-navy) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.acac-partner-card .acac-partner-text {
+  color: #334155 !important;
+  line-height: 1.65 !important;
+  font-size: 14px !important;
+}
+
+.acac-partner-link {
+  color: var(--cmc-blue) !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.acac-partner-link:hover {
+  color: var(--cmc-navy) !important;
+  transform: translateX(4px) !important;
+}
+
+/* Section 7 (Why Choose Us Check-list Contrast) */
+.why-choose-us li {
+  color: #1e293b !important;
+  line-height: 1.65 !important;
+}
+
+.why-choose-us li strong {
+  color: var(--cmc-navy) !important;
+}
+
+footer h1, footer h2, footer h3, footer .col-title, .section-footer .col-title {
+  color: #ffffff !important;
+  border-bottom: 2px solid var(--cmc-blue) !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 16px !important;
+  display: inline-block !important;
+}
+
+footer .hover-list a {
+  color: #cbd5e1 !important;
+  transition: color 0.2s ease !important;
+}
+
+footer .hover-list a:hover {
+  color: var(--cmc-cyan) !important;
+}
+
+/* Sub-headings and badges */
+.section-title span,
+.sub-title,
+.badge-tech {
+  color: var(--cmc-blue) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+/* Replace old gold with CMC colors */
+[style*="color: #e9bd42"],
+[style*="color:#e9bd42"],
+[style*="color: rgb(233, 189, 66)"],
+[style*="color:#e2bd3f"] {
+  color: var(--cmc-blue) !important;
+}
+
+[style*="background-color: #e9bd42"],
+[style*="background-color:#e9bd42"],
+[style*="background-color:#e2bd3f"] {
+  background-color: var(--cmc-blue) !important;
+}
+
+/* ==========================================================================
+   5. FOOTER (RESOLVES OVERLAPPING & MATCHES BRAND)
+   ========================================================================== */
+.section-footer, #section_757621261 {
+  background-color: var(--cmc-navy) !important;
+  padding-top: 50px !important;
+  padding-bottom: 40px !important;
+  position: relative !important;
+  border-top: 4px solid var(--cmc-blue) !important;
+}
+
+#section_757621261 .section-bg-overlay {
+  background-color: rgba(0, 26, 58, 0.75) !important;
+}
+
+/* Clear the buggy negative margins in footer column */
+#col-1598688624 > .col-inner,
+@media (min-width:550px) {
+  #col-1598688624 > .col-inner {
+    margin: 0 !important;
+    padding: 0 15px !important;
+  }
+}
+
+.footer-primary, .absolute-footer {
+  background-color: var(--cmc-dark) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #94a3b8 !important;
+  font-size: 13px !important;
+}
+
+.footer-primary a, .absolute-footer a {
+  color: var(--cmc-cyan) !important;
+}
+
+/* ==========================================================================
+   6. FLOATING CONTACT & CHATBOT WIDGET
+   ========================================================================== */
+/* Hide broken old chatbot container if present */
+.acac-chat-widget,
+#acac-chat-root,
+.acac-chatbot-widget {
+  display: none !important;
+}
+
+/* Floating quick contact button */
+.cmcu-floating-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.cmcu-float-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.cmcu-float-btn:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 143, 213, 0.45);
+}
+
+.cmcu-float-btn.phone {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.cmcu-float-btn.zalo {
+  background: linear-gradient(135deg, #0084ff, #0068ff);
+}
+
+.cmcu-float-btn.fb {
+  background: linear-gradient(135deg, #1877f2, #0d5ec4);
+}
+
+.cmcu-float-btn.ai {
+  background: linear-gradient(135deg, var(--cmc-blue), var(--cmc-navy));
+  border: 2px solid var(--cmc-cyan);
+}
+
+.cmcu-float-btn i {
+  font-size: 22px;
+}
+
+.cmcu-float-btn .tooltip-label {
+  position: absolute;
+  right: 62px;
+  background: var(--cmc-navy);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cmcu-float-btn:hover .tooltip-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Top link back to top */
+#top-link {
+  background-color: var(--cmc-blue) !important;
+  border-color: var(--cmc-blue) !important;
+  color: #ffffff !important;
+  bottom: 25px !important;
+  left: 25px !important;
+  right: auto !important;
+}
+
+#top-link:hover {
+  background-color: var(--cmc-navy) !important;
+}

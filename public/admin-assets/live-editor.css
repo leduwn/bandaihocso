@@ -1,0 +1,289 @@
+/* ACAC LIVE VISUAL EDITOR STYLES */
+body.acac-editor-active {
+  margin-top: 50px !important;
+}
+
+.acac-live-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: #0a2453;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 9999999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.acac-live-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.acac-live-badge {
+  background: #e9bd42;
+  color: #0a2453;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.acac-live-page {
+  color: #e2e8f0;
+}
+
+.acac-change-counter {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #f1f5f9;
+}
+
+.acac-change-counter.has-changes {
+  background: #ef4444;
+  color: #fff;
+  font-weight: 600;
+  animation: acac-pulse 1.5s infinite;
+}
+
+@keyframes acac-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.acac-live-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.acac-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+}
+
+.acac-btn-save {
+  background: #10b981;
+  color: white;
+}
+.acac-btn-save:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+}
+.acac-btn-save:disabled {
+  background: #64748b;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.acac-btn-admin {
+  background: #3b82f6;
+  color: white !important;
+}
+.acac-btn-admin:hover {
+  background: #2563eb;
+}
+
+.acac-btn-logout {
+  background: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1 !important;
+}
+.acac-btn-logout:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171 !important;
+}
+
+/* Editable Hover Highlighting */
+.acac-editable-text {
+  position: relative;
+  transition: outline 0.15s ease, background 0.15s ease;
+  cursor: pointer;
+}
+
+.acac-editable-text:hover {
+  outline: 2px dashed #3b82f6 !important;
+  outline-offset: 2px;
+  background-color: rgba(59, 130, 246, 0.08) !important;
+}
+
+.acac-editable-text.acac-editing {
+  outline: 2px solid #10b981 !important;
+  background-color: rgba(16, 185, 129, 0.05) !important;
+  cursor: text;
+}
+
+.acac-edited {
+  outline: 2px solid #f59e0b !important;
+}
+
+/* Image Editable Overlay */
+.acac-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.acac-img-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #0a2453;
+  color: #e9bd42;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid #e9bd42;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.acac-img-wrapper:hover .acac-img-btn {
+  opacity: 1;
+}
+
+/* Modal */
+.acac-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.acac-modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 520px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: acac-fadein 0.2s ease-out;
+}
+
+@keyframes acac-fadein {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.acac-modal-header {
+  background: #0a2453;
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.acac-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.acac-modal-close {
+  font-size: 24px;
+  cursor: pointer;
+  color: #94a3b8;
+  line-height: 1;
+}
+.acac-modal-close:hover {
+  color: white;
+}
+
+.acac-modal-body {
+  padding: 20px;
+  color: #1e293b;
+}
+
+.acac-upload-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background: #f8fafc;
+  margin-top: 10px;
+}
+
+.acac-preview-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.acac-modal-footer {
+  padding: 15px 20px;
+  background: #f1f5f9;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.acac-btn-primary {
+  background: #0a2453;
+  color: white;
+}
+.acac-btn-primary:hover {
+  background: #1e3a8a;
+}
+
+.acac-btn-secondary {
+  background: #e2e8f0;
+  color: #475569;
+}
+.acac-btn-secondary:hover {
+  background: #cbd5e1;
+}
+
+/* Toast */
+.acac-toast {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #0f172a;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 10000000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #10b981;
+}
