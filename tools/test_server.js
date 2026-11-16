@@ -1,4 +1,5 @@
 const http = require('http');
+const { db } = require('../lib/db');
 
 function request(options, postData) {
   return new Promise((resolve, reject) => {
@@ -85,6 +86,9 @@ async function runTests() {
     method: 'GET'
   });
   console.log('Homepage reflects edited text:', res.body.includes('CÔNG TY TNHH TƯ VẤN VÀ KIỂM TOÁN ANH (ACAC CHUẨN)'));
+
+  // Clean up test edit row so data/acac.db is not polluted with ACAC text
+  db.prepare("DELETE FROM page_edits WHERE page_slug = 'index' AND element_id = 'txt-0' AND content_value LIKE '%ACAC%'").run();
 
   console.log('\n--- TEST 8: Test Contact Form Submission ---');
   const contactPayload = JSON.stringify({
